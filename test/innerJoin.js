@@ -153,10 +153,10 @@ describe('innerJoin', function () {
 
 		expect(res2).to.be.an(Array);
 		expect(res2[0]).to.be.an(Array);
-		expect(res2[0].length).to.have.lengthOf(2);
-		expect(res2[0]).to.be([arr1[0], [arr2[0]);
-		expect(res2[1]).to.be([arr1[1], [arr2[1]);
-		expect(res2[2]).to.be([arr1[2], [arr2[2]);
+		expect(res2[0]).to.have.length(2);
+		expect(res2[0]).to.eql([arr1[0], arr2[0]]);
+		expect(res2[1]).to.eql([arr1[1], arr2[1]]);
+		expect(res2[2]).to.eql([arr1[2], arr2[2]]);
 
 		done();
 	});

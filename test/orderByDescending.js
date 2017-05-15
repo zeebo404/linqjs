@@ -22,16 +22,29 @@ describe('orderByDescending', function () {
 		});
 
 		expect(res).to.be.an(Array);
-		expect(res[0].Name).to.be.eql('A');
-		expect(res[0].Val).to.be.eql(1);
-		expect(res[1].Name).to.be.eql('a');
-		expect(res[1].Val).to.be.eql(2);
-		expect(res[2].Name).to.be.eql('B');
+		expect(res[0].Name).to.be.eql('C');
+		expect(res[0].Val).to.be.eql(2);
+		expect(res[1].Name).to.be.eql('B');
+		expect(res[1].Val).to.be.eql(1);
+		expect(res[2].Name).to.be.eql('A');
 		expect(res[2].Val).to.be.eql(1);
-		expect(res[3].Name).to.be.eql('C');
+		expect(res[3].Name).to.be.eql('a');
 		expect(res[3].Val).to.be.eql(2);
 
 		done();
 	});
+
+    it('Should sort the elements of a sequence in descending order using the default selector', function(done) {
+        
+        var arr = ['a', 'A', 'C', 'B'];
+        
+        var res = arr.orderByDescending();
+		expect(res).to.be.an(Array);
+		expect(res[0]).to.be.eql('C');
+		expect(res[1]).to.be.eql('B');
+		expect(res[2]).to.be.eql('A');
+		expect(res[3]).to.be.eql('a');
+        done();
+    });
 
 });
